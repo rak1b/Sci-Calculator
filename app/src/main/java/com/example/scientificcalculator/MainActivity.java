@@ -2,6 +2,7 @@ package com.example.scientificcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         tv_input = findViewById(R.id.tv_input);
         tv_output = findViewById(R.id.tv_output);
         num0 = findViewById(R.id.num0);
@@ -501,8 +501,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_memory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String txt = tv_input.getText().toString();
+                SharedPreferences myshrd = getSharedPreferences("saving_data",MODE_PRIVATE);
+                SharedPreferences.Editor myeditor = myshrd.edit();
+                myeditor.putString("data",txt);
+                myeditor.apply();
 
+            }
 
+        });
 
 
 

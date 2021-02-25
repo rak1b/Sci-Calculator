@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".MainActivity"
-    android:background="@color/col2"
+    android:background="#448AFF"
     >
 
 
@@ -15,36 +15,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="2"
+        android:weightSum="2"
         android:orientation="vertical"
-        android:background="#FFD600"
         >
 
         <TextView
             android:id="@+id/tv_input"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:gravity="top"
             android:padding="10sp"
             android:text=""
             android:textAlignment="viewStart"
             android:textSize="20sp"
             android:outlineProvider="none"
-            android:background="@color/white"
+            android:background="@drawable/custom_textview"
             />
 
         <TextView
             android:id="@+id/tv_output"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
+            android:layout_weight="0.8"
             android:gravity="bottom"
             android:padding="10sp"
             android:text="0"
             android:textAlignment="viewEnd"
             android:textSize="30sp"
-            android:background="@color/white"
+            android:background="@drawable/custom_textview2"
 
             />
     </LinearLayout>
@@ -56,24 +56,24 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:weightSum="3.5"
+        android:weightSum="4"
 
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
+
 
         >
 
-        <!--    Button starts-->
         <!--        #advance row1-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             >
 
 
             <Button
+
                 android:id="@+id/btn_memory"
 
                 android:layout_weight="1"
@@ -84,10 +84,10 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn3"
-                android:layout_margin="2dp"
                 android:textAllCaps="false"
                 />
             <Button
+
                 android:id="@+id/sin"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -98,9 +98,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/cos"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -111,9 +111,9 @@
                 android:text="cos"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/tan"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -124,10 +124,10 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
             <Button
+
                 android:id="@+id/btn_pi"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -139,9 +139,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_e"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -153,7 +153,6 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
 
@@ -163,7 +162,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             >
@@ -179,9 +178,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_lcm"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -193,12 +192,12 @@
 
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
 
 
             <Button
+
                 android:id="@+id/btn_min"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -209,9 +208,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_max"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -222,11 +221,10 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
             <Button
-                android:id="@+id/btn_log"
+                 android:id="@+id/btn_log"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -236,9 +234,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_music"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -249,7 +247,6 @@
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 android:background="@drawable/custom_btn2"
-                android:layout_margin="2dp"
                 />
 
 
@@ -261,12 +258,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             >
 
             <Button
+
                 android:id="@+id/btn_square"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -277,9 +275,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_cube"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -290,10 +288,10 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
             <Button
+
                 android:id="@+id/btn_xn"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -304,10 +302,10 @@
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
             <Button
+
 
                 android:id="@+id/btn_root"
                 android:layout_weight="1"
@@ -319,10 +317,10 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
             <Button
+
                 android:id="@+id/btn_ln"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -333,9 +331,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_factorial"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -346,7 +344,6 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
 
@@ -355,12 +352,13 @@
         <!-- #advance row4-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             >
 
             <Button
+
                 android:id="@+id/btn_ncr"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -372,9 +370,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_npr"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -386,9 +384,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_percent"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -399,9 +397,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_modulas"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -412,9 +410,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_left_bracket"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -425,9 +423,9 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
             <Button
+
                 android:id="@+id/btn_right_bracket"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -438,7 +436,6 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:background="@drawable/custom_btn1"
-                android:layout_margin="2dp"
                 />
 
 
@@ -455,8 +452,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="4"
         android:weightSum="10"
+
         android:orientation="horizontal">
 
         <!--Layout for 1-9-->
@@ -464,20 +462,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6"
+            android:weightSum="4"
             android:orientation="vertical"
             >
         <!--Layout for 7-9-->
             <LinearLayout
                 android:id="@+id/marg"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_btn2"
                     android:padding="5sp"
@@ -488,10 +490,11 @@
                     />
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num8"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_btn2"
                     android:padding="5sp"
@@ -501,10 +504,11 @@
                     android:textSize="30sp" />
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_btn2"
                     android:padding="5sp"
@@ -519,10 +523,13 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num4"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -531,14 +538,14 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
 
                     />
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num5"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -549,6 +556,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num6"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -557,7 +566,6 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     />
 
@@ -570,10 +578,13 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num1"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -582,14 +593,14 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
 
                     />
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num2"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -600,6 +611,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num3"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -608,7 +621,6 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     />
 
@@ -620,10 +632,13 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/num0"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -632,14 +647,14 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
 
                     />
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/point"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -650,6 +665,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/btn_comma"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -657,8 +674,7 @@
                     android:text=","
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:layout_margin="5dp"
+                    android:textSize="30sp"
                     />
 
 
@@ -677,19 +693,22 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
+            android:weightSum="4"
             android:orientation="vertical">
 
 <!--            Layout for Del,AC-->
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
 
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/btn_del"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -699,6 +718,8 @@
                     android:textColor="@color/white"
                     android:textSize="20sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/btn_ac"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -707,7 +728,6 @@
                     android:background="@drawable/custom_btn3"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     />
 
@@ -721,14 +741,16 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
 
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/multiply"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -738,6 +760,8 @@
                     android:textColor="@color/white"
                     android:textSize="25sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/divide"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -746,7 +770,6 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     />
 
@@ -763,14 +786,16 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
 
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/plus"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -780,6 +805,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/minus"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -788,7 +815,6 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     />
 
@@ -801,23 +827,29 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
 
 
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/ans"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
                     android:text="Ans"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
                 <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
                     android:id="@+id/equal"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -826,7 +858,6 @@
                     android:background="@drawable/custom_btn2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_margin="5dp"
                     android:padding="5sp"
                     />
 
