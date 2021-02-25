@@ -7,7 +7,9 @@
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".MainActivity"
-    android:background="#448AFF"
+    android:background="@color/col5"
+
+
     >
 
 
@@ -18,6 +20,11 @@
         android:layout_weight="2"
         android:weightSum="2"
         android:orientation="vertical"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+
+
         >
 
         <TextView
@@ -25,13 +32,17 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_textview"
             android:gravity="top"
+            android:outlineProvider="none"
+            android:textColor="@color/white"
+
             android:padding="10sp"
             android:text=""
             android:textAlignment="viewStart"
-            android:textSize="20sp"
-            android:outlineProvider="none"
-            android:background="@drawable/custom_textview"
+            android:textSize="25sp"
+            android:fontFamily="@font/baloo"
+
             />
 
         <TextView
@@ -42,9 +53,11 @@
             android:gravity="bottom"
             android:padding="10sp"
             android:text="0"
+            android:textColor="@color/white"
             android:textAlignment="viewEnd"
             android:textSize="30sp"
             android:background="@drawable/custom_textview2"
+            android:fontFamily="@font/baloo"
 
             />
     </LinearLayout>
@@ -57,6 +70,8 @@
         android:layout_height="0dp"
         android:layout_weight="4"
         android:weightSum="4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
 
         android:orientation="vertical"
 
@@ -82,11 +97,14 @@
                 android:padding="5dp"
                 android:text="M+"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn3"
-                android:textAllCaps="false"
+
+                android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/sin"
                 android:layout_weight="1"
@@ -94,25 +112,31 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="sin"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/cos"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:text="cos"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/tan"
                 android:layout_weight="1"
@@ -120,13 +144,16 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="tan"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                android:fontFamily="@font/baloo"
+
                 />
 
             <Button
+
 
                 android:id="@+id/btn_pi"
                 android:layout_weight="1"
@@ -135,12 +162,15 @@
                 android:padding="5dp"
                 android:text="π"
                 android:textStyle="italic"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_e"
                 android:layout_weight="1"
@@ -148,12 +178,16 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="e"
-                android:textStyle="italic"
                 android:textAllCaps="false"
+                android:textStyle="italic"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
+
 
 
         </LinearLayout>
@@ -165,6 +199,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
+
             >
 
             <Button
@@ -173,13 +208,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="gcd"
-                android:textAllCaps="false"
+                android:text="Gcd"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_lcm"
                 android:layout_weight="1"
@@ -187,12 +225,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="lcm"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
 
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
+
 
 
 
@@ -204,12 +245,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="min"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_max"
                 android:layout_weight="1"
@@ -217,13 +261,16 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="max"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
 
             <Button
+
                  android:id="@+id/btn_log"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -231,23 +278,31 @@
                 android:padding="5dp"
                 android:text="log"
                 android:textAllCaps="false"
+
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_music"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="♫"
-                android:textAllCaps="false"
+                android:text="Save"
                 android:textColor="@color/white"
-                android:textSize="25sp"
+                android:textSize="15sp"
                 android:background="@drawable/custom_btn2"
+
+                            android:fontFamily="@font/baloo"
+
                 />
+
 
 
         </LinearLayout>
@@ -271,12 +326,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="x²"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_cube"
                 android:layout_weight="1"
@@ -284,13 +342,16 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="x³ "
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                android:fontFamily="@font/baloo"
+
                 />
 
             <Button
+
 
                 android:id="@+id/btn_xn"
                 android:layout_weight="1"
@@ -298,13 +359,16 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="xⁿ"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
 
             <Button
+
 
 
                 android:id="@+id/btn_root"
@@ -313,26 +377,35 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="√x"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
 
             <Button
+
 
                 android:id="@+id/btn_ln"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="ln"
+                android:text="Ln"
                 android:textAllCaps="false"
+
+
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_factorial"
                 android:layout_weight="1"
@@ -341,10 +414,15 @@
                 android:padding="5dp"
                 android:text="n!"
                 android:textAllCaps="false"
+
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
+
 
 
         </LinearLayout>
@@ -365,13 +443,17 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="nCr"
-                android:textStyle="italic"
                 android:textAllCaps="false"
+                android:textStyle="italic"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_npr"
                 android:layout_weight="1"
@@ -379,13 +461,18 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="nPr"
-                android:textStyle="italic"
                 android:textAllCaps="false"
+
+                android:textStyle="italic"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_percent"
                 android:layout_weight="1"
@@ -393,12 +480,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="%"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_modulas"
                 android:layout_weight="1"
@@ -406,12 +496,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="mod"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_left_bracket"
                 android:layout_weight="1"
@@ -419,12 +512,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="("
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
             <Button
+
 
                 android:id="@+id/btn_right_bracket"
                 android:layout_weight="1"
@@ -432,11 +528,14 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text=")"
-                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:background="@drawable/custom_btn1"
+
+                            android:fontFamily="@font/baloo"
+
                 />
+
 
 
         </LinearLayout>
@@ -482,10 +581,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/custom_btn2"
+
                     android:padding="5sp"
                     android:text="7"
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+
+                    android:textSize="25sp"
+
+                                android:fontFamily="@font/baloo"
 
                     />
 
@@ -497,11 +600,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/custom_btn2"
+
                     android:padding="5sp"
 
                     android:text="8"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
 
                 <Button
                     android:layout_marginLeft="10dp"
@@ -511,10 +618,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/custom_btn2"
+
                     android:padding="5sp"
                     android:text="9"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
 
 
             </LinearLayout>
@@ -536,9 +647,13 @@
                     android:layout_height="wrap_content"
                     android:text="4"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+
+                                android:fontFamily="@font/baloo"
 
                     />
 
@@ -552,9 +667,13 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
 
+
                     android:text="5"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -564,9 +683,13 @@
                     android:layout_height="wrap_content"
                     android:text="6"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+                                android:fontFamily="@font/baloo"
+
                     />
 
 
@@ -591,9 +714,13 @@
                     android:layout_height="wrap_content"
                     android:text="1"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+
+                                android:fontFamily="@font/baloo"
 
                     />
 
@@ -607,9 +734,13 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
 
+
                     android:text="2"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -619,9 +750,13 @@
                     android:layout_height="wrap_content"
                     android:text="3"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+                                android:fontFamily="@font/baloo"
+
                     />
 
 
@@ -645,9 +780,13 @@
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+
+                                android:fontFamily="@font/baloo"
 
                     />
 
@@ -661,9 +800,13 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
 
+
                     android:text="."
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -673,9 +816,13 @@
                     android:layout_height="wrap_content"
                     android:text=","
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
+                                android:fontFamily="@font/baloo"
+
                     />
+
 
 
 
@@ -714,9 +861,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn3"
+
                     android:text="del"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                                android:fontFamily="@font/baloo"
+android:textSize="18sp"
+                    />
+
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -726,9 +877,13 @@
                     android:layout_height="wrap_content"
                     android:text="AC"
                     android:background="@drawable/custom_btn3"
+
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:padding="5sp"
+
+                                android:fontFamily="@font/baloo"
+
                     />
 
 
@@ -756,9 +911,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
+
                     android:text="X"
                     android:textColor="@color/white"
-                    android:textSize="25sp" />
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
+
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -768,9 +927,13 @@
                     android:layout_height="wrap_content"
                     android:text="÷"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+                                android:fontFamily="@font/baloo"
+
                     />
 
 
@@ -801,9 +964,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
+
                     android:text="+"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                                android:fontFamily="@font/baloo"
+android:textSize="25sp"
+                    />
+
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -813,9 +980,13 @@
                     android:layout_height="wrap_content"
                     android:text="-"
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+                                android:fontFamily="@font/baloo"
+
                     />
 
 
@@ -842,10 +1013,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_btn2"
+
                     android:text="Ans"
-                    android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="25sp" />
+
+                    android:fontFamily="@font/baloo"
+                    android:textSize="20sp"
+                    />
                 <Button
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -856,9 +1030,13 @@
                     android:layout_height="wrap_content"
                     android:text="="
                     android:background="@drawable/custom_btn2"
+
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:padding="5sp"
+
+                                android:fontFamily="@font/baloo"
+
                     />
 
 

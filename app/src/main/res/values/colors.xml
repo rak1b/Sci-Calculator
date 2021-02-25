@@ -12,7 +12,42 @@
     <color name="nav_blue">#0D1239</color>
     <color name="yellow">#EEC710</color>
 
-    <color name="col1">#044797</color>
-    <color name="col2">#0D1239</color>
-    <color name="col3">#EEC710</color>
+<!--    <color name="col1">#044797</color>-->
+<!--    <color name="col2">#0D1239</color>-->
+<!--    <color name="col3">#EEC710</color>-->
+<!--    <color name="col4">#FF5252</color>-->
+
+<!--&lt;!&ndash;    upper btn&ndash;&gt;-->
+<!--    <color name="col1">#93B2FE</color>-->
+
+<!--&lt;!&ndash;    lower btn&ndash;&gt;-->
+<!--    <color name="col2">#AC7FFC</color>-->
+
+<!--&lt;!&ndash;    special btn&ndash;&gt;-->
+<!--    <color name="col3">#F595B8</color>-->
+
+<!--&lt;!&ndash;    textview btn&ndash;&gt;-->
+<!--    <color name="col4">#CCCFF5</color>-->
+<!--    -->
+<!--&lt;!&ndash;    background&ndash;&gt;-->
+<!--    <color name="col5">#CCCFF5</color>-->
+
+
+    <!--    upper btn-->
+        <color name="col1">#044797</color>
+
+    <!--    lower btn-->
+        <color name="col2">#0D1239</color>
+
+    <!--    special btn-->
+    <color name="col3">#FF5252</color>
+
+
+
+    <!--    textview btn-->
+    <color name="col4">#0D1239</color>
+
+
+    <!--    background-->
+    <color name="col5">#E3DFDF</color>
 </resources>

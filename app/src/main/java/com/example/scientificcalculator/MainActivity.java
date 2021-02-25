@@ -5,21 +5,71 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.mariuszgromada.math.mxparser.*;
+
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
+
 
     TextView tv_input, tv_output;
     Button sin, cos, tan, btn_shift, btn_e, btn_pi, btn_square, btn_cube, btn_root, btn_gcd,btn_lcm,btn_log, btn_ln, btn_factorial, btn_ncr, btn_npr, btn_modulas, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, point, btn_exp, btn_del, btn_ac, multiply, divide, minus, plus, ans, equal,btn_percent,btn_left_bracket,btn_right_bracket,btn_comma,btn_memory,btn_min,btn_max,btn_xn,btn_music;
     boolean valid = true;
     boolean val = true;
     String ans_val ;
+    String  ncr_n,ncr_r,npr_r,npr_n;
+
+    TextToSpeech textToSpeech;
+
+    static String nPr(String val,String npr_n,String npr_r)
+    {
+        String [] npr_arr = val.split("P",2);
+        npr_n = npr_arr[0];
+        npr_r = npr_arr[1];
+        int npr_minus = Integer.parseInt(npr_n) - Integer.parseInt(npr_r);
+        String npr_formula = npr_n + "!/" + String.valueOf(npr_minus) +"!";
+        val = val.replaceAll(npr_n+"P"+npr_r,npr_formula);
+        return val;
+
+    }
+    static String nCr(String val,String ncr_n,String ncr_r)
+    {
+        String [] ncr_arr = val.split("C",2);
+        ncr_n = ncr_arr[0];
+        ncr_r = ncr_arr[1];
+        int ncr_minus = Integer.parseInt(ncr_n) - Integer.parseInt(ncr_r);
+        String ncr_formula = ncr_n+"!/("+ncr_r+"!" + "*" +String.valueOf(ncr_minus)+"!)";
+        val = val.replaceAll(ncr_n+"C"+ncr_r,ncr_formula);
+        return val;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//        Hides the status bar___________________________________________________________________________________________
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
+//        Hides the status bar___________________________________________________________________________________________
+//
+//
+//        for TextToSpeech
+        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+               textToSpeech.setLanguage(Locale.US);
+
+            }
+        });
+        //        for TextToSpeech
+
+
         setContentView(R.layout.activity_main);
         tv_input = findViewById(R.id.tv_input);
         tv_output = findViewById(R.id.tv_output);
@@ -75,24 +125,24 @@ public class MainActivity extends AppCompatActivity {
         btn_music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                    if(btn_music.getText().toString().equals("►")){
-                    if(!val){
 
-                        music.stop();
-                        btn_music.setText("♫");
-                        val=true;
-
-                    }
-//                    else if(btn_music.getText().toString().equals("♫")){
-                    else{
-
-                        music.start();
-                        btn_music.setText("►");
-                        val=false;
+//Text to speech
 
 
-                    }
-                }
+
+                String txt = tv_input.getText().toString();
+                SharedPreferences myshrd = getSharedPreferences("saving_data",MODE_PRIVATE);
+                SharedPreferences.Editor myeditor = myshrd.edit();
+                myeditor.putString("data",txt);
+                myeditor.apply();
+
+                tv_input.setText("");
+                textToSpeech.speak("Daata Saved", TextToSpeech.QUEUE_ADD, null);
+                Toast.makeText(getApplicationContext(),"Data saved!Click M+ To Display Data",Toast.LENGTH_LONG).show();
+//                clearing input view after saving data
+
+
+            }
 
 
 //            }
@@ -227,8 +277,9 @@ public class MainActivity extends AppCompatActivity {
         btn_comma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_input.setText(String.valueOf(tv_input.getText()+","));
+                String text = tv_input.getText().toString();
 
+                tv_input.setText(text+",");
 
 
             }
@@ -472,6 +523,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        btn_ncr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv_input.setText(tv_input.getText().toString() + "C");
+            }
+        });
+
+        btn_npr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv_input.setText(tv_input.getText().toString() + "P");
+            }
+        });
         equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -485,11 +550,24 @@ public class MainActivity extends AppCompatActivity {
                 val = val.replaceAll("√","sqrt");
                 val = val.replaceAll("π","pi ");
 
+                if(val.contains("C")){
+                    val = nCr(val,ncr_n,ncr_r);
+
+                }else if(val.contains("P")){
+                    val = nPr(val,npr_n,npr_r);
+
+                }
+
+
+
                 Expression exp;
                 exp = new Expression(val);
-
                 String result = String.valueOf(exp.calculate());
                 ans_val = result;
+                if(result.equals("NaN")){
+                    result = "Invalid Input Or Syntax";
+                    tv_output.setTextColor(getResources().getColorStateList(R.color.col3));
+                }
                 tv_output.setText(result);
             }
         });
@@ -504,11 +582,11 @@ public class MainActivity extends AppCompatActivity {
         btn_memory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String txt = tv_input.getText().toString();
+
                 SharedPreferences myshrd = getSharedPreferences("saving_data",MODE_PRIVATE);
-                SharedPreferences.Editor myeditor = myshrd.edit();
-                myeditor.putString("data",txt);
-                myeditor.apply();
+
+                String text = myshrd.getString("data","Memory Is Empty");
+                tv_input.setText(text);
 
             }
 
